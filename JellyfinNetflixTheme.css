@@ -1986,22 +1986,6 @@ background-image: url(https://images.ctfassets.net/y2ske730sjqp/821Wg4N9hJD8vs5F
 /* Make watched icon dark and transparent */
 .indicator { background: #00000058 !important;}
 
-.headerHomeButton {
-  display: none;
-}
-
-.headerButton.headerButtonRight.headerUserButton.paper-icon-button-light {
- display: none;
-}
-
-.layout-desktop .headerCastButton {
-  display: none;
-}
-
-.headerSyncButton {
-  display: none;
-}
-
 #loginPage {
   background-color:#181818;
 background:none;
