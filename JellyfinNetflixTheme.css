@@ -880,20 +880,6 @@ div[data-role="controlgroup"] a[data-role="button"]:last-child {
   display: none;
 }
 
-/* @media all and (min-width:50em) {
-    .homePage .emby-scroller {
-        margin-right: 0
-    }
-
-    .homePage .emby-scrollbuttons {
-        display: none
-    }
-
-    .homePage .itemsContainer {
-        flex-wrap: wrap
-    }
-} */
-
 @media all and (max-width: 100em) {
   .withSectionTabs .headerTop {
     padding-bottom: 0.55em;
@@ -1972,9 +1958,6 @@ width:45%;
 .mdl-slider {
   border-radius: 100%;
 }
-
-/*hide upcoming in tv shows and trailers in movies*/
-body > div.skinHeader.focuscontainer-x.skinHeader-withBackground.skinHeader-blurred > div.headerTabs.sectionTabs > div > div > button:nth-child(3) {display: none !important} 
 
 /*Library Page - Align Posters to Center */
 .padded-right-withalphapicker {padding-right:2.5% !important;}
