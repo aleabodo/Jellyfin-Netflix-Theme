@@ -199,7 +199,6 @@ html {
 
 /*#####################################################################################################################
             LAYOUT DESKTOP
-
 ######################################################################################################################*/
 .headroom--unpinned {
   -webkit-transform: translateY(-100%);
@@ -302,6 +301,13 @@ html {
   margin-top: 0;
 }
 
+/* 
+  Remove rounded corners from emby buttons (e.g., in dropdown menus) 
+*/
+.emby-button {
+  --rounding: 0;
+}
+
 .layout-desktop a.overview-expand.emby-button {
   margin: none;
   padding: none;
@@ -359,25 +365,6 @@ html {
   position: relative;
   top: 69%;
   right: 0;
-}
-
-/*  season section  */
-.layout-desktop .vertical-list {
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
-.layout-desktop .listItem-withContentWrapper {
-  align-items: flex-start;
-  flex-direction: column;
-  width: 32%;
-}
-
-.layout-desktop .listItem-content {
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-  align-items: flex-start;
 }
 
 .layout-desktop .listItemImage-large {
@@ -1725,30 +1712,6 @@ div[data-role="controlgroup"] a[data-role="button"] + a[data-role="button"] {
   display: none;
 }
 
-/*  season section  */
-.layout-desktop .vertical-list {
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
-.layout-desktop .listItem-withContentWrapper {
-  align-items: flex-start;
-  flex-direction: column;
-  width: 32%;
-}
-
-.layout-desktop .listItem-content {
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.layout-desktop .listItemImage-large {
-  height: 16vw;
-  width: 100%;
-}
-
 .layout-mobile .headerHomeButton,
 .layout-mobile .headerSyncButton {
     display: none;
@@ -1787,14 +1750,6 @@ div[data-role="controlgroup"] a[data-role="button"] + a[data-role="button"] {
 .layout-mobile .directorsGroup,
 .layout-mobile .writersGroup,
 #seriesAirTime {
-    display: none;
-}
-
-/* Quitamos imagen de poster */
-.layout-mobile .detailImageContainer .card,
-.layout-mobile .detailImageContainer .card.backdropCard,
-.layout-mobile .detailImageContainer .card.squareCard {
-    top: auto;
     display: none;
 }
 
@@ -2041,7 +1996,7 @@ background:none;
     display: none;
   }
   .homePage .itemsContainer {
-    flex-wrap: wrap;
+    flex-wrap:nowrap;
   }
 }
 
@@ -2163,7 +2118,7 @@ background-color:rgba(0,0,0,0);
 .play_arrow:hover {
   background-color: rgba(4, 4, 4, 0.6) !important;
   color: white;
-border-radius:inherit;
+  border-radius:inherit;
 }
 
 .cardOverlayButton {
