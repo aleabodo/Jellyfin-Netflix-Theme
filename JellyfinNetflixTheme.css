@@ -1,9 +1,13 @@
+/* Disable detail logo and backdrop image because it's annoying in the music page */
+.detailLogo, .backdropImage  {
+  display: none;
+}
 
 /* Theme Colours */
 :root {
   --rounding: 10px;
   /* Sets the roundness of elements */
-  --backdrop-bg: rgba(115, 79, 150, 0.3);
+  --backdrop-bg: argba(115, 79, 150, 0.3);
   /* Sets colour for the background when backdrops are enabled */
   --buttons: #967bb6;
   /* Sets the colour of the buttons text */
@@ -636,33 +640,11 @@ html {
   margin-top: 1em;
 }
 
+
 /********************************************************************************************************
       general layout
 ********************************************************************************************/
-/* cast & crew circular */
-/*#castContent .cardImageContainer.coveredImage.cardContent.itemAction.lazy.non-blurhashable.lazy-image-fadein-fast,
-#castContent .cardImageContainer.coveredImage.defaultCardBackground.defaultCardBackground1.cardContent.itemAction {
-  border-radius: 50%;
-}
 
-#castContent .cardPadder.cardPadder-overflowPortrait.lazy-hidden-children,
-#castContent .cardPadder-mixedPortrait,
-#castContent .cardPadder-overflowPortrait,
-#castContent .cardPadder-portrait,
-#castContent .overflowPortraitCard-textCardPadder {
-  border-radius: 50%;
-  padding-bottom: 100%;
-}
-
-#castContent .cardOverlayButton-br {
-  bottom: 0;
-  position: absolute;
-  left: 38%;
-}
-
-#castContent .cardOverlayContainer {
-  border-radius: 50%;
-}*/
 
 div#videoOsdPage {
   overflow: hidden !important;
@@ -1547,7 +1529,6 @@ div[data-role="controlgroup"] a[data-role="button"] + a[data-role="button"] {
 }
 
 /*Correct image aspect ratio behaviour, set border-radius to zero for square tiles*/
-
 @media all and (min-width: 131.25em) {
   #castContent .cardScalable {
     width: calc(6.3vw - 0.6em) !important;
@@ -1644,46 +1625,6 @@ div[data-role="controlgroup"] a[data-role="button"] + a[data-role="button"] {
   transition: ease-in 1s;
 }
 
-/* uncomment this section for your own jellyfin logo */
-
-/* .adminDrawerLogo img {
-    content: url("");
-}
-
-.imgLogoIcon {
-    content: url("");
-}
-
-.pageTitleWithLogo {
-    background-image: url("");
-    width: 200px;
-    height: 40px;
-    left: 3px;
-} */
-
-/* uncomment this for full sized media section
-
-
-@media (max-width: 62.5em) {
-.section0 .cardText.cardTextCentered.cardText-first {
-height:2.5em
-}
-}
-.section0 button.itemAction.textActionButton {
-background:rgba(0,0,0,0);
-border-radius:var(--rounding);
-height:3.5em
-}
-
-.section0 .overflowBackdropCard,.section0 .overflowSmallBackdropCard {
-max-width:90vw
-}
-
-.section0 .emby-scroller {
-margin-right:0
-}
-*/
-
 .section0 .itemsContainer {
   align-items: center;
   justify-content: center;
@@ -1691,58 +1632,7 @@ margin-right:0
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*----------------------------------------------------------------------------------------*/
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 .layout-desktop .detailLogo {
@@ -1823,12 +1713,8 @@ margin-right:0
 }
 
 .layout-desktop .btnPlay {
-    /*border: 2px solid #cecece;*/
     border-radius: 2em;
-    /*width: 7vw;*/
     background-color: white;
-    /*padding: 0.4em!important;*/
-    /*margin-right: 30%!important;*/
 }
 
 .layout-desktop .btnPlay:hover {
@@ -1877,22 +1763,6 @@ margin-right:0
   width: 100%;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .layout-mobile .headerHomeButton,
 .layout-mobile .headerSyncButton {
     display: none;
@@ -1924,7 +1794,6 @@ margin-right:0
 }
 
 /* Seccion Peliculas/Series */
-
 .layout-mobile .itemTags,
 .layout-mobile .itemExternalLinks,
 .layout-mobile .trackSelections,
@@ -1960,7 +1829,6 @@ margin-right:0
 .detail-clamp-text {
     -webkit-line-clamp: none;
 }
-
 
 .layout-mobile .infoWrapper {
     padding-left: 0;
@@ -2002,12 +1870,10 @@ margin-right:0
     content: '';
     right: 0;
     left: 0;
-    /*top: 0;*/
     bottom: 0;
     height: 25vh;
     position: absolute;
     z-index: -1;
-    /*background: linear-gradient(0deg, #181818 15%, #18181800 65%);*/
     background: linear-gradient(0deg, #181818 10%, #18181800 65%);
 }
 
@@ -2038,10 +1904,7 @@ margin-right:0
 
 .layout-mobile .btnPlay {
   border-radius: 2em;
-  /*width: 7vw;*/
   background-color: white;
-  /*padding: 0.4em!important;*/
-  /*margin-right: 30%!important;*/
 }
 
 .layout-mobile .btnPlay::after {
@@ -2093,7 +1956,6 @@ margin-right:0
   margin-top: 1em;
 }
 
-
 .layout-desktop .nameContainer {display:none}
 
 .layout-mobile .homeLibraryButton {
@@ -2107,18 +1969,12 @@ width:45%;
     width: 45% !important;
 }}
 
-
-
 .mdl-slider {
   border-radius: 100%;
 }
 
-
- /*hide upcoming in tv shows and trailers in movies*/
-
+/*hide upcoming in tv shows and trailers in movies*/
 body > div.skinHeader.focuscontainer-x.skinHeader-withBackground.skinHeader-blurred > div.headerTabs.sectionTabs > div > div > button:nth-child(3) {display: none !important} 
-
-
 
 /*Library Page - Align Posters to Center */
 .padded-right-withalphapicker {padding-right:2.5% !important;}
@@ -2128,31 +1984,21 @@ div.alphaPickerRow-vertical {display: none !important;}
 
 /*Item Page - resize Subtitle bar*/
 .trackSelections {max-width: 22em;}
-
-
-
- /* Login Page Logo*/
-
+ 
+/* Login Page Logo*/
 .imgLogoIcon {
 
 content: url(https://images.ctfassets.net/y2ske730sjqp/821Wg4N9hJD8vs5FBcCGg/9eaf66123397cc61be14e40174123c40/Vector__3_.svg) !important; }
 
 /* Main Drawer Mobile Logo*/
-
 .adminDrawerLogo img {
 
 content: url(https://images.ctfassets.net/y2ske730sjqp/821Wg4N9hJD8vs5FBcCGg/9eaf66123397cc61be14e40174123c40/Vector__3_.svg) !important; }
 
 /* Home Page Logo*/
-
 .pageTitleWithLogo {
 
 background-image: url(https://images.ctfassets.net/y2ske730sjqp/821Wg4N9hJD8vs5FBcCGg/9eaf66123397cc61be14e40174123c40/Vector__3_.svg) !important; } 
-
-
-
-
-
 
 /* Make watched icon dark and transparent */
 .indicator { background: #00000058 !important;}
@@ -2161,14 +2007,9 @@ background-image: url(https://images.ctfassets.net/y2ske730sjqp/821Wg4N9hJD8vs5F
   display: none;
 }
 
-
-
-
 .headerButton.headerButtonRight.headerUserButton.paper-icon-button-light {
  display: none;
 }
-
-
 
 .layout-desktop .headerCastButton {
   display: none;
@@ -2219,13 +2060,11 @@ background:none;
   display: none;
 }
 
-
 .emby-input:focus,
 .emby-textarea:focus,
 .emby-select-withcolor {
   border-color: #E50914 !important;
 }
-
 
 @media all and (min-width: 50em) {
   .homePage .emby-scroller {
@@ -2239,15 +2078,10 @@ background:none;
   }
 }
 
-
-
-
 .layout-mobile .listItemBodyText {margin-top:-13px !important;}
 .layout-mobile .listItem-bottomoverview {margin-top:1.2em !important;}
 .itemExternalLinks focuscontainer-x {display:none !important;}
 .layout-mobile .itemExternalLinks {display:none !important;}
-
-
 
 /*Narrow the login form, size according to display size (bigger on mobile)*/
 #loginPage .readOnlyContent,
@@ -2267,13 +2101,6 @@ background:none;
 #loginPage .raised.cancel.block.btnForgotPassword.emby-button {
   display: none
 }
-
-
-
-
-
-
-
 
 /*New progress bar*/
 #indexPage .innerCardFooterClear,
@@ -2312,11 +2139,6 @@ background:none;
   }
 }
 
-
-
-
-
-
 .headerTabs.sectionTabs {display:none;}
 
 .layout-desktop .pageTitle {margin: auto;}
@@ -2326,95 +2148,24 @@ background:none;
   display: none !important;
 }
 
-
 .skinHeader.focuscontainer-x.skinHeader-withBackground.skinHeader-blurred.noHomeButtonHeader {
   background-color: rgb(24, 24, 24) !important;
   background-image: linear-gradient( rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0) ) !important;
 }
 
-
-
-
-
 #scenesCollapsible {display: none;}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-:root {
-  --rounding: 10px;
-  --backdrop-bg: rgba(24, 24, 24, 0);
-  --buttons: rgb(24, 24, 24);
-  --buttons-bg: #E50914;
-  --buttons-hover: rgb(249, 249, 249);
-  --buttons-link: #E50914;
-  --dialog-bg: rgb(249, 249, 249);
-  --card-hover: rgba(0, 0, 0, 0.3);
-  --card-icon: #d9222200;
-  --card-icon-hover: rgba(23, 23, 23, 0);
-  --card-indicator: #df360fde;
-  --card-indicator-rounding: 2px;
-  --card-indicator-margin: 0.3em;
-  --icon-bg-hover: rgba(45, 44, 44, 0);
-  --progress-outer: rgba(0, 0, 0, 0.5);
-  --progress-outer-border: rgba(229, 9, 20, 0.9);
-  --progress-inner: rgba(229, 9, 20, 0.75);
-  --default-card-bg1: #7B181866;
-  --default-card-bg2: #7B181866;
-  --default-card-bg3: #7B181866;
-  --default-card-bg4: #7B181866;
-  --default-card-bg5: #7B181866;
-  --collapse-menu-hover: #E509143D;
-  --dropdown-bg: rgba(85, 85, 85, 0.24);
-  --playback-progress: #E50914;
-  --playback-progress-height: 0.37em;
-  --transcode-progress: rgba(255, 145, 0, 0.3);
-  --admin-add: #094e0f;
-  --admin-add-bg: #aee2ae;
-  --admin-refresh: #171717;
-  --admin-refresh-bg: #ece7e7;
-  --admin-restart: #e27802;
-  --admin-restart-bg: #fcecdd;
-  --admin-shutdown: #f4eaea;
-  --admin-shutdown-bg: #E50914;
-}
-
-:root {
-  --swiper-theme-color: #E50914;
-}
 
 .playstatebutton-icon-unplayed:hover, .btnPlaystate:hover, .material-icons.favorite:hover, .btnUserRating:hover, .listItemButton:hover, .material-icons.info_outline:hover, .btnPlayTrailer:hover, .btnShuffle:hover, .btninfo_outline:hover, .shuffle:hover, .listItemButton:hover {
   color: #E50914 !important;
 }
 
-
-
 .button-flat:hover {
   color: #E50914 !important;
 }
 
-
-
-
-
-
-
 .layout-desktop .btnPlay:hover {
   background-color: #f0f0f0b0;
 }
-
-
 
 div.mdl-slider-background-lower, input.mdl-slider::-webkit-slider-thumb, .mdl-slider::-webkit-slider-thumb, .sliderBubbleTrack { background: #E50914; color:#E50914;} 
 
@@ -2425,16 +2176,11 @@ div.mdl-slider-background-lower, input.mdl-slider::-webkit-slider-thumb, .mdl-sl
   background: #E50914;
 }
 
-
-
-
-
 .navMenuOption-selected {
 background-color:rgba(0,0,0,0);
   background: #fff !important;
   color: #060606;
 }
-
 
 @media (hover: hover) and (pointer: fine) {
   .paper-icon-button-light:hover:not(:disabled) {
@@ -2443,15 +2189,9 @@ background-color:rgba(0,0,0,0);
   }
 }
 
-
 .toastVisible {color:rgb(249, 249, 249);background:#181818;}
 
-
-
-
 .chapterThumbTextContainer {color:#f9f9f9;background:#000000}
-
-
 
 .play_arrow:hover {
   background-color: rgba(4, 4, 4, 0.6) !important;
@@ -2459,17 +2199,9 @@ background-color:rgba(0,0,0,0);
 border-radius:inherit;
 }
 
-
-
-
 .cardOverlayButton {
   color: hsl(0, 0%, 100%);
 }
-
-
-
-
-
 
 @media (hover: hover) and (pointer: fine) {
   .paper-icon-button-light {
@@ -2478,30 +2210,13 @@ border-radius:inherit;
   }
 }
 
-
-
 .block {
     background-color: #292929;
 }
 
-
-
 .button-submit {
     background: rgb(229, 9, 20);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .layout-mobile .itemBackdrop {
   height: 45vh;
@@ -2509,8 +2224,6 @@ border-radius:inherit;
   -webkit-mask-image: linear-gradient(black 30%, transparent);
   mask-image: linear-gradient(black 30%, transparent);
 }
-
-
 
 .detail-clamp-text {
   overflow: hidden;
@@ -2521,18 +2234,7 @@ display: -webkit-box;
 -webkit-box-orient: vertical;
 }
 
-
-
-
-
-
-
-
-
-
-
 /*BLACK PLAY BUTTON*/
-
 .btnPlay::after {
   color: #fbf7f7 !important;
 }
